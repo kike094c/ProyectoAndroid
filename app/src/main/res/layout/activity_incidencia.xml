@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_incidencia"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="es.pgl.dam.incidencias.Incidencia">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <RadioButton
+                android:text="Embarque"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/P"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/F"
+                android:layout_toEndOf="@+id/F"
+                android:layout_marginLeft="53dp"
+                android:layout_marginStart="53dp"
+                android:layout_weight="1"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:text="Facturación"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/F"
+                android:layout_below="@+id/radioGroup"
+                android:layout_toRightOf="@+id/radioGroup"
+                android:layout_toEndOf="@+id/radioGroup"
+                android:layout_marginLeft="44dp"
+                android:layout_marginStart="44dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:checked="true" />
+
+        </RadioGroup>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:id="@+id/Most_num"
+            android:hint="Número mostrador" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:id="@+id/tarjeta"
+            android:hint="Número tarjeta" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/descripcion"
+            android:hint="Descripción. Ejemplo: BTP no imprime."
+            android:layout_weight="0.32" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tecnico" />
+
+        <Button
+            android:text="Iniciar incidencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button5"
+            android:onClick="añadirIncidencia" />
+
+    </LinearLayout>
+
+</RelativeLayout>
